@@ -1,0 +1,60 @@
+---
+title: "GDF15_Wang"
+author: "Jake"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Title: GDF15 emerging biology and therapeutic applications for obesity and cardiometabolic disease
+# Abstract
+ * TGF$\beta$ superfamily
+ * stress, exercise, and metformin lead to increase in GDF15
+ * GDF15 & GFRAL are independent of other appetite hormones
+ 
+```{r Data_Insert, include=FALSE}
+library(readxl)
+library(knitr)
+plasmaMin <- 0.1
+plasmaMax <- 1.2
+Old <- read_excel("~/OneDrive - University of Pittsburgh/Jurczak lab/Jake/Young-vs-Old-Summary-01.22.21.xlsx",
+range = "A16:AA29")
+Young <- read_excel("~/OneDrive - University of Pittsburgh/Jurczak lab/Jake/Young-vs-Old-Summary-01.22.21.xlsx",
+range = "A1:AA14")
+
+
+```
+ 
+# Introduction
+  * Obesity-->NAFLD & Insulin Resistance--> T2DM
+  * GDF15
+    + ~25 kDa homodimer
+    + 112 AA w Disulfide linkage
+  * Expressed
+    + Liver, Intestine, Kidney, and placenta
+  * GDF15 increase in obesity
+  * GDF15 inversely related with body mass in nonobese peeps
+  * GDF15 is not causing obesity but rather Increased levels of GDf15 are a consequence of obesity. 
+  * GDF15 levels are at `r plasmaMin` to `r plasmaMax` (ng/mL)
+    + GDF15 old mice have 0.25 ng/mL
+    + GDF15 young mice have 0.17 ng/mL
+    
+```{r}
+mean(Old$`Plasma GDF15 (pg/mL)`)
+mean(Young$`Plasma GDF15 (pg/mL)`)
+t.test(Old$`Plasma GDF15 (pg/mL)`,Young$`Plasma GDF15 (pg/mL)`)
+
+```
+## Summary Key Points 
+[Uniprot](https://www.uniprot.org/uniprotkb?query=Gdf15)
+[GTEx](https://gtexportal.org/home/gene/GDF15)
+```{r Key_Points, echo=FALSE}
+include_graphics("graphics/GDF15 Key Points.png")
+```
+
+### Tissue Expression
+ * *Gdf15 is expressed in healthy mice in the following order: Kidney>Liver>WAT>BAT>skeletal muscle*
+* *Gdf15 is expressed in Obese mice in the following order: Liver>WAT>BAT get to levels in the kidney*
