@@ -70,8 +70,11 @@ include_graphics("graphics/Screen Shot 2022-09-20 at 11.53.46 PM.png")
  + **which()**: returns position
  + **subset()** or a[,]: returns subset of vector or data frame
  + **paste0(,)**: paste together two objects
+ + t <- table(a$aff,a$trait,**useNA = "always"**)
+ + **kable**(t,caption = "Case Control Study"): nice table
+ + a %>% **mutate**(lifeExp = **replace**(lifeExp, (year==1957), 69.96))
  
-##### Levels 
+##### Factors 
  +  a1 <- a$all2; **levels(a1)** <- c(levels(a1),"C"); levels(a1): this adds a level
  + levels(g.f) <- c("T/T","A/T","A/A"): naming levels
  + a1 <- **factor(a$all1)**: drop unused levels
@@ -93,6 +96,16 @@ include_graphics("graphics/Screen Shot 2022-09-20 at 11.53.46 PM.png")
   filter(str_detect(word, "x$")): filter out based upon detection
  + [Stringr](https://r4ds.had.co.nz/strings.html)  
  + [str_cheatsheet](https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_strings.pdf)  
+ 
+##### Functions
+swag <- function (swagy){
+Body swagy
+Return ()
+}
+
+###### Debug
++ **browser()**: R interpreter, use c to continue, n for new line, and Q to quit. 
++ **options(error=recover)** then **options(error=null)**: same as Debug but lets you choose which function. 
 
 # TidyVerse
  + a %>% **filter** (all1=="G"): kinda like subset () or a[,]
