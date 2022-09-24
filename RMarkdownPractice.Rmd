@@ -103,6 +103,7 @@ Body swagy
 Return ()
 }
 
+
 ###### Debug
 + **browser()**: R interpreter, use c to continue, n for new line, and Q to quit. 
 + **options(error=recover)** then **options(error=null)**: same as Debug but lets you choose which function. 
