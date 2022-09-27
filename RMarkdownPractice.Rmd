@@ -73,6 +73,7 @@ include_graphics("graphics/Screen Shot 2022-09-20 at 11.53.46 PM.png")
  + t <- table(a$aff,a$trait,**useNA = "always"**)
  + **kable**(t,caption = "Case Control Study"): nice table
  + a %>% **mutate**(lifeExp = **replace**(lifeExp, (year==1957), 69.96))
+ + *apply()* family: over dataframe (use tapply for mean of many groups)
  
 ##### Factors 
  +  a1 <- a$all2; **levels(a1)** <- c(levels(a1),"C"); levels(a1): this adds a level
@@ -115,3 +116,13 @@ Return ()
  + a %>% **select**(aff,g): like a[,c("aff","all1")]
  + **%in%** : match of the thing preceding the symbol
 
+# dplyr
++ *tbl_df()*: special df that wraps
++ *select()*: exactly like df[,c("",""...)]. Can use column_name1:column_name5
++ *filter*: filter(d_df, Pi > 16, percent.GC > 80) like 
+d[d$Pi > 16 & d$percent.GC > 80, ]
++ *arrange()*: arrange(d_df, desc(total.SNPs), desc(depth))
++ *mutate()*: d_df <- mutate(d_df, diversity = Pi/(10*1000))
++ *%>%* :d_df %>% filter(percent.GC > 40) is filter(d_df, percent.GC > 40
++ *groupby()*: mtfs_df %>% group_by(chr): groups by rows
++ *summarize()*: create a table of you name it.
