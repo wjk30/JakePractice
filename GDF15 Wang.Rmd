@@ -82,12 +82,16 @@ include_graphics("graphics/GDF15_regulation.png")
  * starts at 40 kDa--> signal sequence cut 30 kDa (pro)-->13 kDA (mature)-->homodimers (25-26 kDa)
 
 ### GFRAL signaling
- * GFRAL does not bind to other TGF$\beta$ superfamily
+ * GFRAL does not bind to other TGF$\beta$ superfamily or Glial Derived neurotrophic factor (GDNF)
  * Needs receptor tyrosine kinase called RET (51>9,43)
- * GFRAL only expressed in hindbrain-brainstem (area postema & nucleus tractus solitarus) & BWAT. But no protein in BWAT. 
+ * GFRAL only expressed in hindbrain-brainstem (area postema & nucleus tractus solitarus) & BWAT. But no protein in BWAT.
+ * RET is expressed in brainstem and hypothalamus
  * Mice have a GFRAL splicing variant
- * *What is wrong with recombinant GDF15?*
+ * *What is wrong with recombinant GDF15? in terms of signaling with TGFB receptors*
 ```{r}
 include_graphics("graphics/GFRAL:RET.png")
 ```
 
+### GDF15 GWAS
+* evidence that GDF15 changes eQTL and pQTL
+*no evidence in mendilian randomization.
