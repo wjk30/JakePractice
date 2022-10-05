@@ -114,15 +114,17 @@ Return ()
  + **recode** (a$g, `1`='T/T',`2`='A/T',`3`='A/A'): change the way objects are layed out.
  + a %>% **arrange(t)** : like a[order(a$t),]
  + a %>% **select**(aff,g): like a[,c("aff","all1")]
- + **%in%** : match of the thing preceding the symbol
+ + **%in%** : match of the thing preceding the symbol. Subset too. Different lengths.
 
 # dplyr
 + *tbl_df()*: special df that wraps
-+ *select()*: exactly like df[,c("",""...)]. Can use column_name1:column_name5
-+ *filter*: filter(d_df, Pi > 16, percent.GC > 80) like 
++ *select()*: COLUMNS exactly like df[,c("",""...)]. Can use column_name1:column_name5
++ *filter*: ROWS filter(d_df, Pi > 16, percent.GC > 80) like 
 d[d$Pi > 16 & d$percent.GC > 80, ]
 + *arrange()*: arrange(d_df, desc(total.SNPs), desc(depth))
 + *mutate()*: d_df <- mutate(d_df, diversity = Pi/(10*1000))
 + *%>%* :d_df %>% filter(percent.GC > 40) is filter(d_df, percent.GC > 40
 + *groupby()*: mtfs_df %>% group_by(chr): groups by rows
 + *summarize()*: create a table of you name it.
++ *%in%*
+
